@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#1d4ed8">
+    <meta name="description" content="Aplicación de Lista de Tareas PWA">
+
+    <title>Mi PWA de Tareas</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="icons/icon-192.png" type="image/png">
+    <link rel="apple-touch-icon" href="icons/icon-192.png">
+</head>
+
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Lista de Tareas</h1>
+            <p class="subtitle">Gestión simple y organizada de tus pendientes</p>
+        </header>
+
+        <section class="input-container">
+            <input type="text" id="tarea" placeholder="Escribe una tarea" autocomplete="off">
+            <button id="agregar">Agregar tarea</button>
+        </section>
+
+        <div class="controls-bar">
+            <span class="stats" id="stats">0 tareas pendientes</span>
+            <div class="actions">
+                <button id="btn-notificacion" class="btn-secondary" title="Notificaciones">Notificaciones</button>
+                <button id="btn-instalar" class="btn-secondary hidden" title="Instalar">Instalar</button>
+            </div>
+        </div>
+
+        <ul id="lista"></ul>
+
+        <footer class="status-footer">
+            <span id="estado-conexion" class="online">🟢 En línea</span>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>
